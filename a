@@ -1,1 +1,25 @@
 a
+
+git restore : git restore --source 커밋아이디 + 파일명
+ 이전 commit을 지정해서 그 commit으로 돌아감.
+
+commit 취소하는 법 : git revert 커밋아이디 
+이렇게 하면 해당 커밋에 했던 작업들을 취소하고 그걸 취소했다는 새 커밋을 생성.
+여러개도 취소 가능
+
+과거로 전부 되돌리기 : git reset --hard 커밋아이디
+해당 커밋아이디 시점 이후에 작업한 거 전부 지우고 저 커밋 시점으로 돌아감.
+
+리셋인데 변동사항 지우지 말고 스테이징 해놓기
+git reset --soft 커밋아이디
+
+리셋인데 변동사항 지우지 말고 unstage 해놓기
+git reset --mixed 커밋아이디
+
+브랜치 이름 변경 : git branch -M 변경할 브랜치명 
+; github에선 기본 브랜치명은 항상 main으로 해야 함.
+
+github에 내용 올리기 : git push -u 원격저장소 주소, 올릴 브랜치명
+
+원격저장소 주소 변수명으로 바꾸는 법 :
+git remote add 변수명 주소 
